@@ -1,2 +1,1 @@
-# labs_2nd_semester
-Here are all my labs
+# Laboratory Work 2, Variant 3, Level 3
