@@ -1,28 +1,29 @@
 from longest_peak import longest_peak
 
 def analyze_training():
-    print("=== Аналіз потужності велосипедиста ===")
-    print("Мета: знайти найдовший цикл (підйом, пік, спад).")
+    print("=== Cycling Power Analysis System ===")
+    print("Goal: Identify the longest cycle (warmup, peak, recovery).")
     
     try:
-        user_input = input("\nВведіть показники потужності (хв): ")
+        user_input = input("\nEnter power data points (Watts per min): ")
         power_data = [int(x) for x in user_input.split()]
         
         if len(power_data) < 3:
-            print("Помилка: Недостатньо даних для аналізу (мінімум 3 значення).")
+            print("Error: Insufficient data for analysis (minimum 3 values required).")
             return
 
         length, summit_min = longest_peak(power_data)
 
         if length > 0:
-            print(f"\nРезультати аналізу тренування:")
-            print(f"- Тривалість найдовшого циклу: {length} хв.")
-            print(f"- Пік навантаження зафіксовано на: {summit_min + 1}-й хвилині.")
+            print(f"\nTraining Session Results:")
+            print(f"- Longest cycle duration: {length} min.")
+            print(f"- Peak load recorded at: minute {summit_min + 1}.")
         else:
-            print("\nУ цьому тренуванні не знайдено правильних пікових циклів.")
+            print("\nNo valid peak cycles identified in this session.")
             
     except ValueError:
-        print("Помилка: Вводьте лише цілі числа через пробіл.")
+        print("Error: Please enter integers separated by spaces.")
 
 if __name__ == "__main__":
+
     analyze_training()
