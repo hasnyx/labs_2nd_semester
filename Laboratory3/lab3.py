@@ -61,7 +61,7 @@ if __name__ == "__main__":
     diameter = binary_tree_diameter(root)
     
     print("-" * 60)
-    print(f"Максимальний діаметр у бінарному дереві становить: {diameter}")
-    print("Найдовший шлях: 9 -> 8 -> 7 -> 3 -> 4 -> 5 -> 6")
-    print(f"Для проходження від листка 9 до листка 6 слід пройти {diameter} ребер.")
+    print(f"The maximum diameter of the binary tree is: {diameter}")
+    print("Longest path: 9 -> 8 -> 7 -> 3 -> 4 -> 5 -> 6")
+    print(f"To travel from leaf 9 to leaf 6, you must cross {diameter} edges.")
     print("-" * 60)
