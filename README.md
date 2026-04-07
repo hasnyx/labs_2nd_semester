@@ -6,4 +6,5 @@
 сірим - сушу (1):<img width="547" height="446" alt="image" src="https://github.com/user-attachments/assets/04457345-a244-48ae-8270-c7331a86ca9a" />
 Загалом у наведеній вище матриці присутні п’ять островів. На зображенні
 нижче вони позначені цифрами 1–5.
+
 <img width="493" height="438" alt="image" src="https://github.com/user-attachments/assets/598c8919-47c3-4401-adf1-01d9d82e7bc1" />
