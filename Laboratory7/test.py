@@ -21,12 +21,12 @@ class TestFlowerFlow(unittest.TestCase):
                 writer.writerow(road)
 
     def test_simple_delivery(self):
-        """Перевірка одного прямого шляху"""
+        """Checking one direct path"""
         self.create_csv(["F1"], ["S1"], [["F1", "S1", "10"]])
         self.assertEqual(calculate_max_cars(self.test_filename), 10)
 
     def test_bottleneck(self):
-        """Перевірка обмеження пропускної здатності (вузьке місце)"""
+        """Checking bandwidth limitation (bottleneck)"""
         self.create_csv(
             ["F1", "F2"], 
             ["S1"], 
@@ -39,7 +39,7 @@ class TestFlowerFlow(unittest.TestCase):
         self.assertEqual(calculate_max_cars(self.test_filename), 5)
 
     def test_multiple_paths(self):
-        """Перевірка розподілу потоку по різних дорогах"""
+        """Checking the flow distribution on different roads"""
         self.create_csv(
             ["F1"], 
             ["S1"], 
@@ -53,7 +53,7 @@ class TestFlowerFlow(unittest.TestCase):
         self.assertEqual(calculate_max_cars(self.test_filename), 12)
 
     def test_no_connection(self):
-        """Перевірка випадку, коли шляху не існує"""
+        """Checking for the case where the path does not exist"""
         self.create_csv(["F1"], ["S1"], [["F1", "X1", "10"], ["X2", "S1", "10"]])
         self.assertEqual(calculate_max_cars(self.test_filename), 0)
 
