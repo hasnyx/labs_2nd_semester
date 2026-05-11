@@ -83,4 +83,4 @@ def calculate_max_cars(file_path):
 
 if __name__ == "__main__":
     result = calculate_max_cars("roads.csv")
-    print(f"Максимальна кількість машин: {result}")
+    print(f"Maximum number of cars: {result}")
